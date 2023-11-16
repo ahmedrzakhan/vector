@@ -7,16 +7,18 @@ import (
 
 /**
 if palindrome  print yes else no
-input 1221 outpue yes
+input 1221 output yes
 */
 
-// isPalindrome checks if a string is a palindrome.
 func isPalindrome(s string) bool {
-	for i := 0; i < len(s)/2; i++ {
-		if s[i] != s[len(s)-1-i] {
+	lengthOfStr := len(s)
+
+	for i := 0; i < lengthOfStr/2; i++ {
+		if s[i] != s[lengthOfStr-1-i] {
 			return false
 		}
 	}
+
 	return true
 }
 
