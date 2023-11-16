@@ -5,6 +5,11 @@ import (
 	"strconv"
 )
 
+/**
+if palindrome  print yes else no
+input 1221 outpue yes
+*/
+
 // isPalindrome checks if a string is a palindrome.
 func isPalindrome(s string) bool {
 	for i := 0; i < len(s)/2; i++ {
@@ -15,10 +20,8 @@ func isPalindrome(s string) bool {
 	return true
 }
 
-func main() {
-	var num int
-	fmt.Println("Enter an integer:")
-	fmt.Scan(&num)
+func mainisPalindrome() {
+	num := 1221
 
 	// Convert integer to string
 	strNum := strconv.Itoa(num)
