@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func mainPatternXSquare() {
 	var N int
 	fmt.Scan(&N)
 
