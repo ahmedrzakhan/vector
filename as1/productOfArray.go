@@ -31,7 +31,7 @@ func productExceptSelf(nums []int) []int {
 	return answer
 }
 
-func main() {
+func mainProductExceptSelf() {
 
 	nums := []int{2, 3, 4, 5}
 
