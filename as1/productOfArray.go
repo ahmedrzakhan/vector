@@ -4,6 +4,11 @@ import (
 	"fmt"
 )
 
+/**
+2, 3, 4, 5
+60, 40, 30, 24
+*/
+
 func productExceptSelf(nums []int) []int {
 	length := len(nums)
 	answer := make([]int, length)

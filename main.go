@@ -4,40 +4,35 @@ import (
 	"fmt"
 )
 
-func productExceptSelf(nums []int) []int {
-	length := len(nums)
-	answer := make([]int, length)
+// Function to find the equilibrium index
+func findEquilibrium(arr []int) int {
+	totalSum := 0
+	leftSum := 0
 
-	// Initialize the answer array
-	answer[0] = 1
-	for i := 1; i < length; i++ {
-		answer[i] = nums[i-1] * answer[i-1]
+	// Calculate the total sum of the array
+	for _, num := range arr {
+		totalSum += num
 	}
-	// fmt.Println("answer", answer)
-	// fmt.Println("nums", nums)
 
-	// Multiply from the right
-	R := 1
-	for i := length - 1; i >= 0; i-- {
-		answer[i] = answer[i] * R
-		// fmt.Println("R before", R)
-		R *= nums[i]
-		// fmt.Println("num[i]", nums[i])
-		// fmt.Println("R after", R)
+	// Iterate through the array to find the equilibrium index
+	for i, num := range arr {
+		totalSum -= num // Now totalSum is right sum for index i
+
+		if leftSum == totalSum {
+			return i // Equilibrium index found
+		}
+
+		leftSum += num // Update leftSum for next iteration
 	}
-	// fmt.Println("answer", answer)
-	// fmt.Println("nums", nums)
 
-	return answer
+	return -1 // No equilibrium index found
 }
 
 func main() {
 
-	nums := []int{2, 3, 4, 5}
+	// Read the size of the array
 
-	result := productExceptSelf(nums)
-	for _, v := range result {
-		fmt.Printf("%d ", v)
-	}
-	fmt.Println()
+	arr := []int{15, 1, 5, 5, 5}
+	// Find and print the equilibrium index
+	fmt.Println(findEquilibrium(arr))
 }
