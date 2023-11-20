@@ -4,6 +4,11 @@ import (
 	"fmt"
 )
 
+/**
+find element with element with lower index to that  are smaller
+and element with higher indexes are higher
+*/
+
 // Function to find the equilibrium index
 func elementInMiddle(arr []int) int {
 	N := len(arr)

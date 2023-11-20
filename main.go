@@ -4,39 +4,18 @@ import (
 	"fmt"
 )
 
-// Function to find the equilibrium index
-func elementInMiddle(arr []int) int {
-	N := len(arr)
-	response := -1
-	for i := 1; i < N; i++ {
-		leftLess := true
-		rightLess := true
-		for j := i - 1; j >= 0; j-- {
-			if arr[j] > arr[i] {
-				leftLess = false
-				break
-			}
-
-		}
-
-		for k := i + 1; k < N; k++ {
-			if arr[i] > arr[k] {
-				rightLess = false
-				break
-			}
-		}
-
-		if leftLess && rightLess {
-			response = arr[i]
-			break
-		}
-
+func isPowerOfTwo(n int) bool {
+	if n == 0 {
+		return false
 	}
-	return response
+	return (n & (n - 1)) == 0
 }
 
 func main() {
-	arr := []int{4, 3, 6, 7, 8}
-	// Find and print the equilibrium index
-	fmt.Println("elementInMiddle", elementInMiddle(arr))
+	n := 4
+	if isPowerOfTwo(n) {
+		fmt.Println("True")
+	} else {
+		fmt.Println("False")
+	}
 }
