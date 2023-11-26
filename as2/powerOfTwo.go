@@ -27,7 +27,7 @@ position where both n and n - 1 have a 1. Thus, the AND operation will not resul
 */
 
 func isPowerOfTwo(n int) bool {
-	if n == 0 {
+	if n == 0 { // also less than 0 will be false
 		return false
 	}
 	return (n & (n - 1)) == 0
