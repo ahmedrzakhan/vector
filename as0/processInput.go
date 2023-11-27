@@ -17,15 +17,15 @@ func mainProcessInput() {
 
 	for i := 0; i < t; i++ {
 		scanner.Scan()                       // Read the line containing N and K
-		nk := strings.Fields(scanner.Text()) // Split the line into fields
-		N, _ := strconv.Atoi(nk[0])          // Convert N to an integer
-		K, _ := strconv.Atoi(nk[1])          // Convert K to an integer
+		NK := strings.Fields(scanner.Text()) // Split the line into fields
+		N, _ := strconv.Atoi(NK[0])          // Convert N to an integer
+		K, _ := strconv.Atoi(NK[1])          // Convert K to an integer
 
 		scanner.Scan()                           // Read the line containing the array elements
 		arrStr := strings.Fields(scanner.Text()) // Split the line into fields
 		arr := make([]int, N)
-		for j, s := range arrStr {
-			arr[j], _ = strconv.Atoi(s) // Convert each array element to an integer
+		for index, elem := range arrStr {
+			arr[index], _ = strconv.Atoi(elem) // Convert each array element to an integer
 		}
 
 		// Now, arr is the array and k is the sum we're looking for
