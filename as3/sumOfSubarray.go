@@ -128,7 +128,7 @@ func hasSubarrayWithSum(arr []int, N int, K int) string {
 }
 
 // main function to test hasSubarrayWithSum
-func main() {
+func mainHasSubarrayWithSum() {
 
 	input := `3
 5 3
