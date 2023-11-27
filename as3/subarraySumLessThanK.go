@@ -49,7 +49,7 @@ func countOfSubarraysLessThanK(arr []int, N int, K int) int {
 	return count
 }
 
-func mainCountOfSubarraysLessThanKBrute() {
+func mainCountOfSubarraysLessThanK() {
 
 	input := `1
 	5 5
