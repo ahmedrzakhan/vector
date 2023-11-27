@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "sc-platform-investments(dev)",
+      "name": "vector-dsa",
       "type": "go",
       "request": "launch",
       "mode": "auto",
