@@ -9,6 +9,8 @@ import (
 )
 
 func mainProcessInput() {
+	// reader := strings.NewReader(input)
+	// scanner := bufio.NewScanner(reader)
 	scanner := bufio.NewScanner(os.Stdin)
 	buf := make([]byte, 0, 64*1024)      // create a buffer with a 64KB initial size
 	scanner.Buffer(buf, 10*1024*1024)    // allow the buffer to grow to a maximum of 10MB
