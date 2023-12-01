@@ -8,19 +8,26 @@ import (
 )
 
 // TC - O(N) SC O(1)
-func getLongestIncreasingSubarrayCount(arr []int, N int) int {
-	fmt.Println("arr", arr)
-	count, maxCount := 1, 1
-	for i := 0; i < N-1; i++ {
-		if arr[i] < arr[i+1] {
-			count++
+func getLongestIncreasingSubarrayCount(s []int, N int) int {
+	count, maxCount, prevOdd := 0, 0, -1
+
+	for i := 0; i < N; i++ {
+		if s[i]%2 == 1 {
+			if s[i] == prevOdd {
+				count++
+			} else {
+				prevOdd = s[i]
+				count = 1
+			}
 			if count > maxCount {
 				maxCount = count
 			}
 		} else {
-			count = 1
+			count = 0
+			prevOdd = -1
 		}
 	}
+
 	return maxCount
 }
 
