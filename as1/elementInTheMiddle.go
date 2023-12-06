@@ -42,6 +42,7 @@ func elementInMiddle(arr []int) int {
 
 func mainElementInMiddle() {
 	arr := []int{4, 3, 6, 7, 8}
+	// 6
 	// Find and print the equilibrium index
 	fmt.Println("elementInMiddle", elementInMiddle(arr))
 }
