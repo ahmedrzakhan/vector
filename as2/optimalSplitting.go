@@ -13,8 +13,8 @@ in the integer n.
 func countOnes(n int64) int {
 	count := 0
 	for n > 0 {
-		count += int(n & 1) // Increment count if the least significant bit is 1
-		n >>= 1             // Shift n to the right by one
+		count = count + int(n&1) // Increment count if the least significant bit is 1
+		n >>= 1                  // Shift n to the right by one
 	}
 	return count
 }
