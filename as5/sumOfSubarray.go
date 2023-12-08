@@ -16,7 +16,7 @@ func getCountA(arr []int, N, K int) string {
 	sumMap := make(map[int]int)
 
 	// Initialize the sumMap for sum 0 at index -1 to handle cases where the subarray starts at index 0
-	sumMap[0] = -1
+	sumMap[0] = -1 // NOTE:
 
 	for i := 0; i < N; i++ {
 		sum += arr[i]
