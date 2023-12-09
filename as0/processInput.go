@@ -15,9 +15,9 @@ func mainProcessInput() {
 	buf := make([]byte, 0, 64*1024)      // create a buffer with a 64KB initial size
 	scanner.Buffer(buf, 10*1024*1024)    // allow the buffer to grow to a maximum of 10MB
 	scanner.Scan()                       // Read the first line to get the number of test cases
-	t, _ := strconv.Atoi(scanner.Text()) // Convert the number of test cases to an integer
+	T, _ := strconv.Atoi(scanner.Text()) // Convert the number of test cases to an integer
 
-	for i := 0; i < t; i++ {
+	for i := 0; i < T; i++ {
 		scanner.Scan()                       // Read the line containing N and K
 		NK := strings.Fields(scanner.Text()) // Split the line into fields
 		N, _ := strconv.Atoi(NK[0])          // Convert N to an integer
