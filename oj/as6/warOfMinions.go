@@ -9,6 +9,13 @@ import (
 	"strings"
 )
 
+/**
+Minions are of 26 types, from 'a' to 'z'. If two Minions of same type finds themselves besides each
+other, they will kill each other.</p><p>You are given a string of Minions. You need to find the final
+ surviving string of Minions, after all the killings. i.e Further No Minion will kill other Minion.
+ If no Minion survived a after all the fighting, print "-1".
+*/
+
 // TC -O(N) SC - O(N)
 func getMinions(s string) string {
 	var stack []string
