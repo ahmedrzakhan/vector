@@ -47,6 +47,9 @@ eyaaaaaaaaaa`
 
 	reader := strings.NewReader(input)
 	scanner := bufio.NewScanner(reader)
+	// NOTE: bigger test cases were giving wrong answer, coz of buffer size
+	buf := make([]byte, 0, 64*1024)
+	scanner.Buffer(buf, 10*1024*1024)
 	// scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	NK := strings.Fields(scanner.Text())

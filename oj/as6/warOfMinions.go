@@ -38,6 +38,9 @@ func mainW() {
 	// 	reader := strings.NewReader(input)
 	// 	scanner := bufio.NewScanner(reader)
 	scanner := bufio.NewScanner(os.Stdin)
+	// NOTE: bigger test cases were giving wrong answer, coz of buffer size
+	buf := make([]byte, 0, 64*1024)
+	scanner.Buffer(buf, 10*1024*1024)
 	scanner.Scan()
 	_, _ = strconv.Atoi(scanner.Text())
 	scanner.Scan()
