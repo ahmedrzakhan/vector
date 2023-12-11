@@ -17,7 +17,7 @@ other, they will kill each other.</p><p>You are given a string of Minions. You n
 */
 
 // TC -O(N) SC - O(N)
-func getMinions(s string) string {
+func getMinionss(s string) string {
 	var stack []string
 
 	for i := 0; i < len(s); i++ {
@@ -29,6 +29,20 @@ func getMinions(s string) string {
 	}
 
 	return strings.Join(stack, "")
+}
+
+func getMinions(s string) string {
+	var stack []rune
+	// NOTE: range gets rune, while basic for gets string
+	for _, ch := range s {
+		if len(stack) != 0 && stack[len(stack)-1] == ch {
+			stack = stack[:len(stack)-1]
+		} else {
+			stack = append(stack, ch)
+		}
+	}
+
+	return string(stack)
 }
 
 func mainW() {
