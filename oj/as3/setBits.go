@@ -11,6 +11,10 @@ import (
 Given an integer output the count of Set Bits present in it's binary representation.
 */
 
+/**
+can also mod with 2 and right shift and counter
+*/
+
 // countSetBits returns the count of set bits in the binary representation of n.
 func countSetBits(n int) int {
 	count := 0
