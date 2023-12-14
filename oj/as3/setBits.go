@@ -15,8 +15,10 @@ Given an integer output the count of Set Bits present in it's binary representat
 func countSetBits(n int) int {
 	count := 0
 	for n > 0 {
-		count += n & 1 // Increment count if the least significant bit is 1
-		n >>= 1        // Shift n to the right by one to check the next bit
+		if int(n&1) == 1 {
+			count++ // Increment count if the least significant bit is 1
+		}
+		n >>= 1 // Shift n to the right by one to check the next bit
 	}
 	return count
 }
