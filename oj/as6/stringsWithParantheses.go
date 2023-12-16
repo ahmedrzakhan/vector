@@ -40,8 +40,10 @@ balanced
 */
 
 /**
+If number of items odd in total return unbalanced immediately at the start
 
- */
+Ask interviewer if anything other than these six characters
+*/
 
 func includes(slice []string, element string) bool {
 	for _, v := range slice {
